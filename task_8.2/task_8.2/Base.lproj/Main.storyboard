@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task_8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-sR-sBC">
+                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="fhB-qU-Qnb"/>
+                                    <constraint firstAttribute="width" constant="200" id="jjk-6Y-z3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qi1-sW-FbA">
+                                <rect key="frame" x="107" y="480" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fMs-tn-qVT"/>
+                                    <constraint firstAttribute="height" constant="34" id="sE1-tZ-cCK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-oc-18T">
+                                <rect key="frame" x="160.5" y="564" width="93" height="51"/>
+                                <color key="backgroundColor" red="0.95750759089033333" green="0.96862745100000003" blue="0.79680540300133917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxp-DI-ABn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18422242_1319960598123549_2912457108758982284_o" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-WT-qt8">
+                                <rect key="frame" x="-273" y="74" width="960" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="960" id="8dd-MA-6Lz"/>
+                                    <constraint firstAttribute="height" constant="128" id="stQ-9B-azB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54449129927922524" green="0.69803921570000005" blue="0.60509343171502661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dDe-WT-qt8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="AzI-wk-CMQ"/>
+                            <constraint firstItem="Qi1-sW-FbA" firstAttribute="top" secondItem="HmX-sR-sBC" secondAttribute="bottom" constant="15" id="C12-0K-w9n"/>
+                            <constraint firstItem="HmX-sR-sBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CCz-C4-Gu6"/>
+                            <constraint firstItem="HmX-sR-sBC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M3Y-Cd-iWh"/>
+                            <constraint firstItem="dDe-WT-qt8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MH7-2e-tZo"/>
+                            <constraint firstItem="Qi1-sW-FbA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0t-jZ-wDN"/>
+                            <constraint firstItem="Dbk-oc-18T" firstAttribute="top" secondItem="Qi1-sW-FbA" secondAttribute="bottom" constant="50" id="s32-kk-kgD"/>
+                            <constraint firstItem="Dbk-oc-18T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgO-7l-Koc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="Qi1-sW-FbA" id="KGm-t8-CpF"/>
+                        <outlet property="username" destination="HmX-sR-sBC" id="LOk-Go-LyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="18422242_1319960598123549_2912457108758982284_o" width="960" height="519"/>
+    </resources>
+</document>
