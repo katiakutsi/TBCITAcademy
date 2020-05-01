@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLu-Iy-5DJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--მანქანები-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="main_vc" id="BYZ-38-t0r" customClass="ViewController" customModule="task_13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dOR-Kb-POb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="car_cell" rowHeight="149" id="RTE-AA-OtE" customClass="CarTableViewCell" customModule="task_13" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="149"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RTE-AA-OtE" id="wDm-sH-yT5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQP-eJ-QwH">
+                                                    <rect key="frame" x="274" y="21" width="100" height="107"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="1J1-8S-Qbl"/>
+                                                        <constraint firstAttribute="height" constant="100" id="74e-fB-bD9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-69-AEg">
+                                                    <rect key="frame" x="25" y="76" width="241" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwV-eY-RND">
+                                                    <rect key="frame" x="25" y="47" width="241" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9Hx-sf-NaE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BCG-69-AEg" firstAttribute="top" secondItem="fwV-eY-RND" secondAttribute="bottom" constant="8" id="09h-gy-YVN"/>
+                                                <constraint firstItem="BCG-69-AEg" firstAttribute="trailing" secondItem="fwV-eY-RND" secondAttribute="trailing" id="0HA-kU-YS6"/>
+                                                <constraint firstItem="BCG-69-AEg" firstAttribute="leading" secondItem="fwV-eY-RND" secondAttribute="leading" id="Bd1-EF-f4N"/>
+                                                <constraint firstItem="kQP-eJ-QwH" firstAttribute="leading" secondItem="fwV-eY-RND" secondAttribute="trailing" constant="8" id="EY1-od-xDw"/>
+                                                <constraint firstItem="fwV-eY-RND" firstAttribute="top" secondItem="wDm-sH-yT5" secondAttribute="topMargin" constant="36" id="QTf-vj-OJA"/>
+                                                <constraint firstItem="kQP-eJ-QwH" firstAttribute="top" secondItem="wDm-sH-yT5" secondAttribute="topMargin" constant="10" id="UM1-DA-Guk"/>
+                                                <constraint firstItem="fwV-eY-RND" firstAttribute="leading" secondItem="wDm-sH-yT5" secondAttribute="leadingMargin" constant="5" id="VmD-jV-Ekx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kQP-eJ-QwH" secondAttribute="trailing" constant="20" id="pZg-Nr-7w5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kQP-eJ-QwH" secondAttribute="bottom" constant="10" id="zrx-ZN-kbZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carImage" destination="kQP-eJ-QwH" id="tE7-Bw-mIY"/>
+                                            <outlet property="modelLabel" destination="fwV-eY-RND" id="z8I-V7-Otq"/>
+                                            <outlet property="priceLabel" destination="BCG-69-AEg" id="vlu-Xx-jIb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-c1-YTv">
+                                <rect key="frame" x="10" y="809" width="105" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="MVB-Bk-V8l"/>
+                                </constraints>
+                                <state key="normal" title="Scroll Down"/>
+                                <connections>
+                                    <action selector="scrollDownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4V-K8-by8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xib-xH-gzX">
+                                <rect key="frame" x="299" y="809" width="105" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="kwW-6o-YuH"/>
+                                </constraints>
+                                <state key="normal" title="Scroll Top"/>
+                                <connections>
+                                    <action selector="scrollTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbB-za-2hO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KO9-c1-YTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4oJ-iL-YcD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xib-xH-gzX" secondAttribute="trailing" constant="10" id="CWw-OK-XZE"/>
+                            <constraint firstItem="dOR-Kb-POb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="URf-kA-qWx"/>
+                            <constraint firstItem="dOR-Kb-POb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZAI-Fi-SDm"/>
+                            <constraint firstItem="KO9-c1-YTv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a0A-Vw-GBF"/>
+                            <constraint firstItem="xib-xH-gzX" firstAttribute="top" secondItem="dOR-Kb-POb" secondAttribute="bottom" id="c0C-z6-S2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dOR-Kb-POb" secondAttribute="bottom" constant="53" id="ens-ks-spw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xib-xH-gzX" secondAttribute="bottom" id="khv-aX-SVl"/>
+                            <constraint firstItem="KO9-c1-YTv" firstAttribute="top" secondItem="dOR-Kb-POb" secondAttribute="bottom" id="o72-fz-8gU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dOR-Kb-POb" secondAttribute="trailing" id="xBW-sK-x4b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="მანქანები" id="Hq8-la-OxR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8fz-C8-cls">
+                            <connections>
+                                <action selector="addBarButton:" destination="BYZ-38-t0r" id="7pB-cE-0G8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dOR-Kb-POb" id="p0G-Rl-SeG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="102.45535714285714"/>
+        </scene>
+        <!--დაამატე მანქანა-->
+        <scene sceneID="RNF-vB-Qem">
+            <objects>
+                <viewController storyboardIdentifier="add_cars" title="დაამატე მანქანა" id="ySV-xS-RgU" customClass="AddCars" customModule="task_13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBN-0H-17J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d7g-Za-UwL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="418"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photos_cell" rowHeight="133" id="Dtx-b2-anw" customClass="PhotosCell" customModule="task_13" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="133"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dtx-b2-anw" id="UIm-0v-iOs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SOv-9m-hc3">
+                                                    <rect key="frame" x="157" y="16" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="1bs-Xe-vVQ"/>
+                                                        <constraint firstAttribute="height" constant="100" id="qJv-40-wWg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SOv-9m-hc3" firstAttribute="top" secondItem="UIm-0v-iOs" secondAttribute="topMargin" constant="5" id="BDt-If-VAH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SOv-9m-hc3" secondAttribute="bottom" constant="6" id="R31-a1-cPx"/>
+                                                <constraint firstItem="SOv-9m-hc3" firstAttribute="leading" secondItem="UIm-0v-iOs" secondAttribute="leadingMargin" constant="137" id="hp0-RI-abn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SOv-9m-hc3" secondAttribute="trailing" constant="137" id="qc8-cL-G9a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carPhoto" destination="SOv-9m-hc3" id="F3b-mf-EWK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="მანქანის ფასი" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEV-Jn-qrG">
+                                <rect key="frame" x="20" y="596" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="მანქანის მოდელი" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoM-wq-fcn">
+                                <rect key="frame" x="20" y="512" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Bbf-6x-Q2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD2-yL-uT9">
+                                <rect key="frame" x="60" y="742" width="294" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TaV-DJ-meE"/>
+                                </constraints>
+                                <state key="normal" title="დამატება">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCarButton:" destination="ySV-xS-RgU" eventType="touchUpInside" id="51W-Vf-4vr"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7M-EV-i35">
+                                <rect key="frame" x="-10" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="ZAB-fr-FsP"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d7g-Za-UwL" firstAttribute="trailing" secondItem="uYb-BU-KWB" secondAttribute="trailing" id="6BC-6b-rgM"/>
+                            <constraint firstItem="yoM-wq-fcn" firstAttribute="top" secondItem="d7g-Za-UwL" secondAttribute="bottom" constant="50" id="HKx-iX-HM6"/>
+                            <constraint firstItem="yoM-wq-fcn" firstAttribute="leading" secondItem="uYb-BU-KWB" secondAttribute="leading" constant="20" id="RDF-ZK-aN5"/>
+                            <constraint firstItem="uYb-BU-KWB" firstAttribute="trailing" secondItem="yoM-wq-fcn" secondAttribute="trailing" constant="20" id="Rlx-aZ-7fV"/>
+                            <constraint firstItem="BD2-yL-uT9" firstAttribute="leading" secondItem="uYb-BU-KWB" secondAttribute="leading" constant="60" id="RzG-et-XXh"/>
+                            <constraint firstItem="d7g-Za-UwL" firstAttribute="top" secondItem="uYb-BU-KWB" secondAttribute="top" id="bIT-lv-ewv"/>
+                            <constraint firstItem="uYb-BU-KWB" firstAttribute="bottom" secondItem="BD2-yL-uT9" secondAttribute="bottom" constant="70" id="d30-Nu-bIw"/>
+                            <constraint firstItem="uYb-BU-KWB" firstAttribute="trailing" secondItem="BD2-yL-uT9" secondAttribute="trailing" constant="60" id="gjH-AA-JKO"/>
+                            <constraint firstItem="uYb-BU-KWB" firstAttribute="bottom" secondItem="d7g-Za-UwL" secondAttribute="bottom" constant="400" id="nSH-2x-TKd"/>
+                            <constraint firstItem="gEV-Jn-qrG" firstAttribute="leading" secondItem="yoM-wq-fcn" secondAttribute="leading" id="o0Y-Pw-AEI"/>
+                            <constraint firstItem="d7g-Za-UwL" firstAttribute="leading" secondItem="uYb-BU-KWB" secondAttribute="leading" id="oIS-97-E6f"/>
+                            <constraint firstItem="gEV-Jn-qrG" firstAttribute="trailing" secondItem="yoM-wq-fcn" secondAttribute="trailing" id="t4B-bf-Kv4"/>
+                            <constraint firstItem="gEV-Jn-qrG" firstAttribute="top" secondItem="yoM-wq-fcn" secondAttribute="bottom" constant="50" id="zed-ZQ-NiL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uYb-BU-KWB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Car" id="zvx-yK-J94"/>
+                    <connections>
+                        <outlet property="inputCar" destination="yoM-wq-fcn" id="YCc-rv-bQN"/>
+                        <outlet property="inputPrice" destination="gEV-Jn-qrG" id="7yw-ah-9JI"/>
+                        <outlet property="photosTableView" destination="d7g-Za-UwL" id="idA-iR-KQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZJ-Yx-eLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="100.44642857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PP8-4O-nHc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eLu-Iy-5DJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DTz-1l-g2o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="501-FI-MYS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeV-qk-NYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+</document>
