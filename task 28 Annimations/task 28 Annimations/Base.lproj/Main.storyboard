@@ -15,8 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LTq-M3-YfY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LTq-M3-YfY">
+                                <rect key="frame" x="0.0" y="80" width="414" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="91" id="fR2-4D-7Zd" customClass="TableViewCell" customModule="task_28_Annimations" customModuleProvider="target">
@@ -58,23 +59,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-9Z-PC6">
+                                <rect key="frame" x="364" y="39" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jed-9n-oxS"/>
+                                    <constraint firstAttribute="width" constant="30" id="fAD-4N-cng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ej1-ds-O08"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LTq-M3-YfY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NG3-Rq-tib"/>
-                            <constraint firstAttribute="bottom" secondItem="LTq-M3-YfY" secondAttribute="bottom" id="Tou-Cz-ZnQ"/>
-                            <constraint firstItem="LTq-M3-YfY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UDR-2X-XEg"/>
-                            <constraint firstItem="LTq-M3-YfY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YQL-dT-MA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w1W-9Z-PC6" secondAttribute="trailing" constant="20" id="4mh-3g-RVL"/>
+                            <constraint firstItem="w1W-9Z-PC6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="39" id="F8J-o2-oZj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="p6y-3a-rIx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jC5-fA-fUe">
+                            <connections>
+                                <action selector="addBarButton:" destination="BYZ-38-t0r" id="3gy-P2-cqL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="outletButton" destination="w1W-9Z-PC6" id="eoa-hp-7cI"/>
                         <outlet property="tableView" destination="LTq-M3-YfY" id="xlJ-i6-zSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="103.79464285714285"/>
+            <point key="canvasLocation" x="844.92753623188412" y="103.79464285714285"/>
         </scene>
     </scenes>
 </document>
