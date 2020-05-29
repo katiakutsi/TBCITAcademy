@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "910d808ade2a576e1a292ceb458a6fa43f67f594",
+          "version": "5.14.0"
+        }
+      },
+      {
+        "package": "TextFieldEffects",
+        "repositoryURL": "https://github.com/raulriera/TextFieldEffects",
+        "state": {
+          "branch": null,
+          "revision": "7e563d4d6d755bb1ab6c1c049f8c215d7c489100",
+          "version": "1.7.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
