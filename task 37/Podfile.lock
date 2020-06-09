@@ -1,0 +1,18 @@
+PODS:
+  - Colours (5.13.0):
+    - Colours/ObjC (= 5.13.0)
+  - Colours/ObjC (5.13.0)
+
+DEPENDENCIES:
+  - Colours
+
+SPEC REPOS:
+  trunk:
+    - Colours
+
+SPEC CHECKSUMS:
+  Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+
+PODFILE CHECKSUM: a2c785e64c0e1fdcb1d4a579889a887bacadd04c
+
+COCOAPODS: 1.9.1
