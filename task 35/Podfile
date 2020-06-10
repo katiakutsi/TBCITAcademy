@@ -6,6 +6,4 @@ target 'task 35' do
   use_frameworks!
 
 pod 'SkeletonView'
- 
-
 end

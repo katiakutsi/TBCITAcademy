@@ -24,7 +24,7 @@ extension ViewController : SkeletonTableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "table_cell", for: indexPath) as! TableViewCell
         
-        UIView.animate(withDuration: 5, delay: 0, options: [], animations: {
+        UIView.animate(withDuration: 3, delay: 0, options: [], animations: {
             
             cell.showAnimatedGradientSkeleton()
             
@@ -53,7 +53,7 @@ extension ViewController : SkeletonTableViewDataSource {
         
         return cell
     }
-    
+
 }
 
 

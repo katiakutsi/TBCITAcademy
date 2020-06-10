@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.showAnimatedGradientSkeleton()
-        
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 210

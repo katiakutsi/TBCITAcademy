@@ -127,7 +127,7 @@
                                                 <constraint firstItem="Dzb-0b-5q6" firstAttribute="leading" secondItem="Li3-8K-qca" secondAttribute="leading" id="uNH-fZ-xPf"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
