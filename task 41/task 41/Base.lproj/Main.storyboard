@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rC6-Cd-OCV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="g0B-xz-AwB">
+            <objects>
+                <viewController id="SE6-L2-Y5A" customClass="MasterViewController" customModule="task_41" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1y-R9-CI5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYQ-e5-CzD">
+                                <rect key="frame" x="0.0" y="806" width="414" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a0L-iE-j8H">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-Vw-VKf">
+                                                <rect key="frame" x="0.0" y="32" width="207" height="26"/>
+                                                <state key="normal" image="home_light">
+                                                    <color key="titleColor" red="0.81176470588235294" green="0.59215686274509804" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onHomePage:" destination="SE6-L2-Y5A" eventType="touchUpInside" id="naQ-Zs-znd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiZ-Ns-Yx3">
+                                                <rect key="frame" x="207" y="32" width="207" height="26"/>
+                                                <state key="normal" image="profile">
+                                                    <color key="titleColor" red="0.81176470588235294" green="0.59215686274509804" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onOrdersPage:" destination="SE6-L2-Y5A" eventType="touchUpInside" id="CKr-zy-fXb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.95686274510000002" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="a0L-iE-j8H" secondAttribute="bottom" id="KRH-dq-soy"/>
+                                    <constraint firstItem="a0L-iE-j8H" firstAttribute="top" secondItem="lYQ-e5-CzD" secondAttribute="top" id="lsk-sS-M1f"/>
+                                    <constraint firstAttribute="height" constant="90" id="pkv-bO-2du"/>
+                                    <constraint firstItem="a0L-iE-j8H" firstAttribute="leading" secondItem="lYQ-e5-CzD" secondAttribute="leading" id="xYA-v3-eaH"/>
+                                    <constraint firstAttribute="trailing" secondItem="a0L-iE-j8H" secondAttribute="trailing" id="y7B-4X-e0z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lYQ-e5-CzD" firstAttribute="leading" secondItem="guo-jK-ROo" secondAttribute="leading" id="YZi-wR-g6S"/>
+                            <constraint firstAttribute="bottom" secondItem="lYQ-e5-CzD" secondAttribute="bottom" id="iz7-up-LL4"/>
+                            <constraint firstItem="lYQ-e5-CzD" firstAttribute="trailing" secondItem="guo-jK-ROo" secondAttribute="trailing" id="txR-gz-RgG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="guo-jK-ROo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qiz-1d-zbM"/>
+                    <connections>
+                        <outlet property="homeOutlet" destination="XMj-Vw-VKf" id="4Hv-va-txj"/>
+                        <outlet property="tabBarView" destination="lYQ-e5-CzD" id="dE7-Gm-H86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmH-1k-9Rj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="292.63392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CBz-rc-liU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rC6-Cd-OCV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IBA-fr-4Sn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SE6-L2-Y5A" kind="relationship" relationship="rootViewController" id="Q8Z-9T-AiG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdr-dI-sml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933.33333333333337" y="292.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_light" width="26" height="26"/>
+        <image name="profile" width="24" height="26"/>
+    </resources>
+</document>
