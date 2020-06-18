@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localize
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let localize = Localize.shared
+        // Set your localize provider.
+        localize.update(provider: .json)
+        // Set your file name
+        localize.update(fileName: "lang")
+        // Set your default languaje.
+        localize.update(defaultLanguage: "en")
+        // If you want change a user language, different to default in phone use thimethod.
+        localize.update(language: "ge")
         // Override point for customization after application launch.
+        Localize.resetLanguage()
         return true
     }
 

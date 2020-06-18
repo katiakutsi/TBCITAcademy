@@ -44,7 +44,7 @@ class AddToCartController: UIViewController {
         
         let coffee = ["image": orderImage!,
                       "name" : orderName!] as [String : Any]
-        NotificationCenter.default.post(name: .choosenPlatformID, object: nil, userInfo: coffee)
+        NotificationCenter.default.post(name: .InfoID, object: nil, userInfo: coffee)
         
         self.navigationController?.popViewController(animated: true)
     }

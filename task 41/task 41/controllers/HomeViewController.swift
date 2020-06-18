@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Localize
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBarView: UIView!
+    @IBOutlet weak var changeLanguageOutlet: UIButton!
+    
+    var language = 0
     
     lazy var ordersViewController: OrdersController = {
         let storyboard = UIStoryboard(name: "MyOrder", bundle: Bundle.main)
@@ -39,10 +43,46 @@ class HomeViewController: UIViewController {
         tabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBarView.layer.cornerRadius = 30
         
+       
+        
+        changeLanguageOutlet.layer.cornerRadius = 10
+        
     }
     
     @IBAction func onOrders(_ sender: UIButton) {
         ordersViewController.view.isHidden = false
+    }
+    
+    @IBAction func changeLanguage(_ sender: UIButton) {
+        
+        let localize = Localize.shared
+        
+        if language == 0 {
+            localize.update(language: "ge")
+            
+            coffees = [
+                Coffee(image: UIImage(named: "Espresso")!, coffeeName: "ესპრესო"),
+                Coffee(image: UIImage(named: "Cappuccino")!, coffeeName: "კაპუჩინო"),
+                Coffee(image: UIImage(named: "macciato")!, coffeeName: "მაჩიატო"),
+                Coffee(image: UIImage(named: "Mocha")!, coffeeName: "მოკა"),
+                Coffee(image: UIImage(named: "latte")!, coffeeName: "ლატე")
+            ]
+            language = 1
+        } else {
+            localize.update(language: "en")
+            coffees = [
+                Coffee(image: UIImage(named: "Espresso")!, coffeeName: "Espresso"),
+                Coffee(image: UIImage(named: "Cappuccino")!, coffeeName: "Cappuccino"),
+                Coffee(image: UIImage(named: "macciato")!, coffeeName: "Macciato"),
+                Coffee(image: UIImage(named: "Mocha")!, coffeeName: "Mocha"),
+                Coffee(image: UIImage(named: "latte")!, coffeeName: "Latte")
+            ]
+            language = 0
+        }
+        
+        
+        
+        tableView.reloadData()
     }
     
     private func addViewControllerAsChildViewController(childViewController: UIViewController){

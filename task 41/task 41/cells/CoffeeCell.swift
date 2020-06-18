@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localize
 
 class CoffeeCell: UITableViewCell {
     
@@ -15,7 +16,7 @@ class CoffeeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //name.text = name.text?.localized
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

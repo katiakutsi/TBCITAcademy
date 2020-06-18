@@ -37,7 +37,7 @@ class OrdersController: UIViewController {
         NotificationCenter.default.addObserver(
         self,
         selector: #selector(didRecieveInfo(with:)),
-        name: .choosenPlatformID,
+        name: .InfoID,
         object: nil)
                 
         print(orders)
