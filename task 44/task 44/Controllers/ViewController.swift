@@ -34,42 +34,6 @@ class ViewController: UIViewController {
         
         activityIndicator.startAnimating()
         
-        
-        
-        if let lat = locationManager.location?.coordinate.latitude, let lon = locationManager.location?.coordinate.longitude {
-            
-            apiService.getCurrentWeather(lat: lat, lon: lon, completion: { (weather) in
-                DispatchQueue.main.async {
-                            
-                    let iconCode = weather.weather[0].icon
-                            
-                    let url = "http://openweathermap.org/img/wn/\(iconCode)@2x.png"
-                
-                    url.downloadImage { (image) in
-                        DispatchQueue.main.async {
-                            self.weatherIcon.image = image
-
-                        }
-                    }
-                            
-                    self.city.text = weather.name
-                    self.temp.text = String(describing: Int(weather.main.temp - 272.15)) + "°C"
-                    self.weatherDescription.text = weather.weather[0].weatherDescription.uppercased()
-                    self.humidity.text = "Humidity : " + String(describing: weather.main.humidity) + "%"
-                    self.pressure.text = "Pressure : " + String(describing: weather.main.pressure)
-                    self.maxTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMax - 272.15)) + "°C"
-                    self.minTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMin - 272.15)) + "°C"
-                            
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.isHidden = true
-                }
-            })
-        } else {
-            
-        }
-        
-        
-        
     }
     @IBAction func showForecast(_ sender: UIButton) {
     }
@@ -104,4 +68,45 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.startUpdatingLocation()
+            
+            if let lat = locationManager.location?.coordinate.latitude, let lon = locationManager.location?.coordinate.longitude {
+                
+                apiService.getCurrentWeather(lat: lat, lon: lon, completion: { (weather) in
+                    DispatchQueue.main.async {
+                                
+                        let iconCode = weather.weather[0].icon
+                                
+                        let url = "http://openweathermap.org/img/wn/\(iconCode)@2x.png"
+                    
+                        url.downloadImage { (image) in
+                            DispatchQueue.main.async {
+                                self.weatherIcon.image = image
+
+                            }
+                        }
+                                
+                        self.city.text = weather.name
+                        self.temp.text = String(describing: Int(weather.main.temp - 272.15)) + "°C"
+                        self.weatherDescription.text = weather.weather[0].weatherDescription.uppercased()
+                        self.humidity.text = "Humidity : " + String(describing: weather.main.humidity) + "%"
+                        self.pressure.text = "Pressure : " + String(describing: weather.main.pressure)
+                        self.maxTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMax - 272.15)) + "°C"
+                        self.minTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMin - 272.15)) + "°C"
+                                
+                        self.activityIndicator.stopAnimating()
+                        self.activityIndicator.isHidden = true
+                    }
+                })
+            }
+        }
+        
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        locationManager.startUpdatingLocation()
+    }
 }
