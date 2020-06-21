@@ -94,7 +94,7 @@ extension ViewController: CLLocationManagerDelegate {
                         self.humidity.text = "Humidity : " + String(describing: weather.main.humidity) + "%"
                         self.pressure.text = "Pressure : " + String(describing: weather.main.pressure)
                         self.maxTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMax - 272.15)) + "°C"
-                        self.minTemp.text = "Maximum Temp : " + String(describing: Int(weather.main.tempMin - 272.15)) + "°C"
+                        self.minTemp.text = "Minimum Temp : " + String(describing: Int(weather.main.tempMin - 272.15)) + "°C"
                                 
                         self.activityIndicator.stopAnimating()
                         self.activityIndicator.isHidden = true
