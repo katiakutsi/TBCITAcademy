@@ -9,7 +9,7 @@
 import Foundation
 
 struct Weather: Codable {
-    let main: Main
+    let main: MainInfo
     let weather: [WeatherElement]
     var date: String?
 
@@ -19,3 +19,23 @@ struct Weather: Codable {
     }
 }
 
+struct MainInfo: Codable {
+    let temp: Double
+}
+
+struct WeatherElement: Codable {
+    let weatherDescription, icon: String
+
+    enum CodingKeys: String, CodingKey {
+        case weatherDescription = "description"
+        case icon
+    }
+}
+
+struct WeathersResponse: Codable {
+    let weathers: [Weather]
+
+    enum CodingKeys: String, CodingKey {
+        case weathers = "list"
+    }
+}
