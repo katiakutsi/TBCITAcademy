@@ -12,7 +12,7 @@ class TrendingController: UIViewController {
     @IBOutlet weak var genresCollectionView: UICollectionView!
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     
-    let viewModel = ViewModel()
+    let viewModel = SongsViewModel()
     var songs = [Song]()
     
     let genres = ["All", "Hip-hop", "Podcasts", "Bollywood", "R&B", "Jazz"]
@@ -26,11 +26,14 @@ class TrendingController: UIViewController {
         
         viewModel.getObjects { (objects) in
             self.songs.append(contentsOf: objects)
-            print(self.songs)
             DispatchQueue.main.async {
                 self.trendingCollectionView.reloadData()
             }
         }
+        
+        trendingCollectionView.delegate = self
+        trendingCollectionView.dataSource = self
+        trendingCollectionView.register(UINib(nibName: "SongsCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "SongsCollectionViewCell")
     }
 
 }
@@ -62,10 +65,32 @@ extension TrendingController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = genresCollectionView.dequeueReusableCell(withReuseIdentifier: "GenresCollectionViewCell", for: indexPath) as! GenresCollectionViewCell
-        cell.genre.text = genres[indexPath.row]
-        return cell
+        
+        switch collectionView.tag {
+        case 0:
+            let cell = genresCollectionView.dequeueReusableCell(withReuseIdentifier: "GenresCollectionViewCell", for: indexPath) as! GenresCollectionViewCell
+            cell.genre.text = genres[indexPath.row]
+            return cell
+        case 1:
+            let cell = trendingCollectionView.dequeueReusableCell(withReuseIdentifier: "SongsCollectionViewCell", for: indexPath) as! SongsCollectionViewCell
+            let song = songs[indexPath.row]
+            song.album.coverBig.downloadImage { (image) in
+                DispatchQueue.main.async {
+                    cell.imv.image = image
+                }
+            }
+            cell.num.text = "#" + String(describing: indexPath.row)
+            cell.title.text = song.album.title
+            cell.artist.text = song.artist.name
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+        
+        
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 25
+    }
     
 }

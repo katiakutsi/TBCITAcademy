@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ViewModel {
+struct SongsViewModel {
     
     
     public var getObjects = { (completion: @escaping ([Song]) -> ()) in

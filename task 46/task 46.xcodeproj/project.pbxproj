@@ -33,6 +33,11 @@
 		D80F0D3A24A11B1C00154628 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F0D3924A11B1C00154628 /* SongsViewModel.swift */; };
 		D80F0D3D24A12C5000154628 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F0D3B24A12C5000154628 /* SongsCollectionViewCell.swift */; };
 		D80F0D3E24A12C5000154628 /* SongsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80F0D3C24A12C5000154628 /* SongsCollectionViewCell.xib */; };
+		D80F0D4024A12E8900154628 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D80F0D3F24A12E8900154628 /* Poppins-Medium.ttf */; };
+		D80F0D4324A12FC100154628 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F0D4224A12FC100154628 /* String.swift */; };
+		D8AFDDE824A1343200EAAAB0 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFDDE724A1343200EAAAB0 /* SearchController.swift */; };
+		D8AFDDED24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFDDEB24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.swift */; };
+		D8AFDDEE24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AFDDEC24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		D80F0D3924A11B1C00154628 /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
 		D80F0D3B24A12C5000154628 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D80F0D3C24A12C5000154628 /* SongsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D80F0D3F24A12E8900154628 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		D80F0D4224A12FC100154628 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D8AFDDE724A1343200EAAAB0 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		D8AFDDEB24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedSongCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8AFDDEC24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchedSongCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,9 @@
 		D80F0CF524A0BC5000154628 /* task 46 */ = {
 			isa = PBXGroup;
 			children = (
+				D8AFDDF024A13CAD00EAAAB0 /* Services */,
+				D8AFDDEF24A13CA300EAAAB0 /* ViewModels */,
+				D80F0D4124A12FB300154628 /* Extensions */,
 				D80F0D1824A0E1BB00154628 /* Model */,
 				D80F0D0E24A0C41100154628 /* Cells */,
 				D80F0D0D24A0C40B00154628 /* Controllers */,
@@ -106,8 +119,6 @@
 				D80F0CFF24A0BC5500154628 /* Assets.xcassets */,
 				D80F0D0124A0BC5500154628 /* LaunchScreen.storyboard */,
 				D80F0D0424A0BC5500154628 /* Info.plist */,
-				D80F0D3524A116E100154628 /* APIService.swift */,
-				D80F0D3924A11B1C00154628 /* SongsViewModel.swift */,
 			);
 			path = "task 46";
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 				D80F0D2524A0F9C600154628 /* Poppins-Regular.ttf */,
 				D80F0D1B24A0E8D400154628 /* Poppins-SemiBold.ttf */,
 				D80F0D0B24A0BDFE00154628 /* Poppins-Bold.ttf */,
+				D80F0D3F24A12E8900154628 /* Poppins-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 			children = (
 				D80F0CFA24A0BC5000154628 /* ExploreController.swift */,
 				D80F0D3324A1047C00154628 /* TrendingController.swift */,
+				D8AFDDE724A1343200EAAAB0 /* SearchController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +159,8 @@
 				D80F0D3024A0FDB900154628 /* GenresCollectionViewCell.xib */,
 				D80F0D3B24A12C5000154628 /* SongsCollectionViewCell.swift */,
 				D80F0D3C24A12C5000154628 /* SongsCollectionViewCell.xib */,
+				D8AFDDEB24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.swift */,
+				D8AFDDEC24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -157,6 +172,30 @@
 				D80F0D3724A118FB00154628 /* Song.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D80F0D4124A12FB300154628 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D80F0D4224A12FC100154628 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8AFDDEF24A13CA300EAAAB0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D80F0D3924A11B1C00154628 /* SongsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8AFDDF024A13CAD00EAAAB0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D80F0D3524A116E100154628 /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,10 +259,12 @@
 				D80F0D0324A0BC5500154628 /* LaunchScreen.storyboard in Resources */,
 				D80F0D1424A0C69500154628 /* RecentlyPlayedCollectionViewCell.xib in Resources */,
 				D80F0D0024A0BC5500154628 /* Assets.xcassets in Resources */,
+				D80F0D4024A12E8900154628 /* Poppins-Medium.ttf in Resources */,
 				D80F0D2624A0F9C600154628 /* Poppins-Regular.ttf in Resources */,
 				D80F0D1C24A0E8D400154628 /* Poppins-SemiBold.ttf in Resources */,
 				D80F0D3E24A12C5000154628 /* SongsCollectionViewCell.xib in Resources */,
 				D80F0D3224A0FDB900154628 /* GenresCollectionViewCell.xib in Resources */,
+				D8AFDDEE24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.xib in Resources */,
 				D80F0D2E24A0FC4400154628 /* ArtistsCollectionViewCell.xib in Resources */,
 				D80F0CFE24A0BC5000154628 /* Main.storyboard in Resources */,
 				D80F0D0C24A0BDFE00154628 /* Poppins-Bold.ttf in Resources */,
@@ -250,7 +291,10 @@
 				D80F0D2D24A0FC4400154628 /* ArtistsCollectionViewCell.swift in Sources */,
 				D80F0D1A24A0E1D100154628 /* Music.swift in Sources */,
 				D80F0D3424A1047C00154628 /* TrendingController.swift in Sources */,
+				D8AFDDE824A1343200EAAAB0 /* SearchController.swift in Sources */,
 				D80F0D2324A0F3C100154628 /* PodcastsCollectionViewCell.swift in Sources */,
+				D80F0D4324A12FC100154628 /* String.swift in Sources */,
+				D8AFDDED24A13B0E00EAAAB0 /* SearchedSongCollectionViewCell.swift in Sources */,
 				D80F0CF724A0BC5000154628 /* AppDelegate.swift in Sources */,
 				D80F0CF924A0BC5000154628 /* SceneDelegate.swift in Sources */,
 			);

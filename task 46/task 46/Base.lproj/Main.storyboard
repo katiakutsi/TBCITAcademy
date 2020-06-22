@@ -115,18 +115,72 @@
         <!--SEARCH-->
         <scene sceneID="Ply-KY-fSm">
             <objects>
-                <viewController id="xLE-YG-NE3" sceneMemberID="viewController">
+                <viewController id="xLE-YG-NE3" customClass="SearchController" customModule="task_46" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TPe-EJ-1zS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-Lu-Ndt">
+                                <rect key="frame" x="0.0" y="60" width="414" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="KyP-fG-f2S"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cny-dN-2aB">
+                                <rect key="frame" x="16" y="163" width="208" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="mTt-3h-6r1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yLa-PU-hF4">
+                                <rect key="frame" x="16" y="210" width="382" height="603"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mr0-kv-J5p">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kyj-2Z-4cV">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xxY-uA-Xs1">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cny-dN-2aB" firstAttribute="top" secondItem="pAp-Lu-Ndt" secondAttribute="bottom" constant="28" id="50T-aT-fmZ"/>
+                            <constraint firstItem="yCI-x3-XPW" firstAttribute="trailing" secondItem="yLa-PU-hF4" secondAttribute="trailing" constant="16" id="7gu-0Y-5jS"/>
+                            <constraint firstItem="cny-dN-2aB" firstAttribute="leading" secondItem="yCI-x3-XPW" secondAttribute="leading" constant="16" id="7tu-JP-a5M"/>
+                            <constraint firstItem="pAp-Lu-Ndt" firstAttribute="top" secondItem="yCI-x3-XPW" secondAttribute="top" constant="16" id="Dwx-bW-9kx"/>
+                            <constraint firstItem="pAp-Lu-Ndt" firstAttribute="leading" secondItem="yCI-x3-XPW" secondAttribute="leading" id="NRN-Y1-Y3g"/>
+                            <constraint firstItem="pAp-Lu-Ndt" firstAttribute="trailing" secondItem="yCI-x3-XPW" secondAttribute="trailing" id="OPr-8Z-dRY"/>
+                            <constraint firstItem="yCI-x3-XPW" firstAttribute="bottom" secondItem="yLa-PU-hF4" secondAttribute="bottom" id="OwX-Kn-y7m"/>
+                            <constraint firstItem="yLa-PU-hF4" firstAttribute="top" secondItem="cny-dN-2aB" secondAttribute="bottom" constant="16" id="RPc-fV-L14"/>
+                            <constraint firstItem="yLa-PU-hF4" firstAttribute="leading" secondItem="yCI-x3-XPW" secondAttribute="leading" constant="16" id="Xdk-2h-mP8"/>
+                            <constraint firstItem="yCI-x3-XPW" firstAttribute="trailing" secondItem="cny-dN-2aB" secondAttribute="trailing" constant="190" id="oeJ-tP-cqg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yCI-x3-XPW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SEARCH" image="magnifyingglass" catalog="system" id="fBZ-p5-PsG"/>
+                    <connections>
+                        <outlet property="searchBar" destination="pAp-Lu-Ndt" id="mIR-Ye-tuE"/>
+                        <outlet property="songsCollectionView" destination="yLa-PU-hF4" id="t1r-Hw-uES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tT3-7l-cNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794" y="-95"/>
+            <point key="canvasLocation" x="2792.753623188406" y="-95.089285714285708"/>
         </scene>
         <!--EXPLORE-->
         <scene sceneID="Fss-6k-Cxb">
