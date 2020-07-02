@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -46,8 +47,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         save()
-//        print(try! FileManager.default.url(for: .documentationDirectory, in: .allDomainsMask, appropriateFor: nil, create: false))
-//        print(geckos)
+        geckos = fetch()
+        
+
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
           layout.delegate = self
         }
-
+        
     }
 
     func save(){
@@ -69,11 +71,24 @@ class ViewController: UIViewController {
             if let binaryImage = imvs[i]!.pngData() {
                 gecko.photo = binaryImage
             }
-            geckos.append(gecko)
         }
         do{
             try context.save()
         }catch {}
+    }
+    
+    func fetch() -> [Gecko]{
+        let context = AppDelegate.coreDataContainer.viewContext
+        let request: NSFetchRequest<Gecko> = Gecko.fetchRequest()
+                
+        do{
+            let result = try context.fetch(request)
+            let geckos = result as [Gecko]
+            
+            return geckos
+            
+        }catch{}
+        return []
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
