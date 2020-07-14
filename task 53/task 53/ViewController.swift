@@ -48,8 +48,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         save()
         geckos = fetch()
-        
-
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -58,6 +56,8 @@ class ViewController: UIViewController {
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
           layout.delegate = self
         }
+        
+        
         
     }
 
@@ -118,6 +118,7 @@ extension ViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        print(geckos[indexPath.row])
         cell.bind(gecko: geckos[indexPath.row])
         return cell
     }

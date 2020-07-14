@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         let newFile = url.appendingPathComponent("\(name).png")
         print(url)
         
+        
         try! img.pngData()?.write(to: newFile)
         print("Success")
     }

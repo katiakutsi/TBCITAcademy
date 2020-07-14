@@ -58,8 +58,6 @@ extension HeaderCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row != 0 {
             
-            let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: OthersStoryCell.identifier, for: indexPath) as! OthersStoryCell
-            
             self.delegate.callSegueFromCell(cell: collectionView.cellForItem(at: indexPath) as! OthersStoryCell)
             didSelectItemAction?(indexPath, collectionView.cellForItem(at: indexPath) as! OthersStoryCell)
         }

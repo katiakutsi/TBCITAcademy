@@ -20,6 +20,7 @@ class UsersAnimesController: UIViewController {
         userAnimeTable.dataSource = self
         userAnimeTable.rowHeight = 85
         self.navigationItem.title = "My Watch List"
+        print(fetchAnimes())
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
