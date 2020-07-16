@@ -23,7 +23,7 @@ class WebServiceManager {
         
         let headers = [
             "x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-            "x-rapidapi-key": "deb94e9b0fmshbe441df75572866p1eb136jsn3f51e610f18a"
+            "x-rapidapi-key": "1349ecfbadmsh7f6537a0614dabbp18529djsn994ca43c6365"
         ]
 
         

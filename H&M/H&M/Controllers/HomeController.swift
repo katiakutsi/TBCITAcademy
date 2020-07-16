@@ -24,6 +24,9 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(UDManager.getUser())
+        print(UDManager.getSigned())
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none

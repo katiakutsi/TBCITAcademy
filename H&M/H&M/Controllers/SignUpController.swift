@@ -41,7 +41,6 @@ class SignUpController: UIViewController {
         }
 
         NotificationCenter.default.post(name: .SignInID, object: nil)
-        performSegue(withIdentifier: SegueIdentifier.SettingsSegue, sender: nil)
     }
     @IBAction func showAndHide(_ sender: UIButton) {
         if !hidden {
