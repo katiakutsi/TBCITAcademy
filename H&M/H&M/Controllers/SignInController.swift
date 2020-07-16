@@ -64,7 +64,6 @@ class SignInController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-        performSegue(withIdentifier: SegueIdentifier.SignInSegue, sender: nil)
     }
     
     @IBAction func showAndHide(_ sender: UIButton) {

@@ -113,6 +113,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signUpButton:" destination="PvN-IC-wm1" eventType="touchUpInside" id="tcx-4i-DcE"/>
+                                            <segue destination="lWO-5z-Cvw" kind="push" id="Cmi-ty-qpV"/>
                                         </connections>
                                     </button>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-GJ-syT">
@@ -188,7 +189,6 @@
                         <outlet property="inputEmail" destination="f3D-Ts-Wng" id="EeE-IG-Vez"/>
                         <outlet property="inputPassword" destination="sSz-cp-jlo" id="nax-I0-GWr"/>
                         <outlet property="visualEffectView" destination="uqc-GJ-syT" id="JAq-lE-wCn"/>
-                        <segue destination="lWO-5z-Cvw" kind="push" identifier="sign_in_segue" id="H7X-FQ-Nkm"/>
                         <segue destination="cwz-xe-CzI" kind="showDetail" identifier="sign_in_segue" id="8tw-aV-oOW"/>
                     </connections>
                 </viewController>
@@ -457,11 +457,11 @@
             <objects>
                 <viewController storyboardIdentifier="settings_page" id="cwz-xe-CzI" customClass="SettingsController" customModule="H_M" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bfb-tw-pbB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-YI-i52">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAy-V8-H2X">
                                         <rect key="frame" x="50" y="15" width="314" height="27"/>
@@ -1587,7 +1587,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="oAQ-EN-vTt"/>
         <segue reference="VGs-RY-giq"/>
-        <segue reference="WH3-k7-FAy"/>
+        <segue reference="8tw-aV-oOW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ic-back" width="38" height="26"/>
